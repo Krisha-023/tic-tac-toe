@@ -1,6 +1,5 @@
-/* eslint-disable react/jsx-key */
 /* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
+
 import React, { useState } from "react";
 import "./styles.css";
 
@@ -15,6 +14,7 @@ function calculateWinner(squares) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -98,7 +98,7 @@ function App() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "Go to move #" + move;
+      description = "Go to move: " + move;
     } else {
       description = "Go to game start";
     }
